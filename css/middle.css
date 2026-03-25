@@ -97,3 +97,107 @@ body {
     margin-top: 10px;
     color: green;
 }
+/* PRODUCT PAGE */
+.product-page {
+    background: #f3f3f3;
+    padding: 60px 0;
+    position: relative;
+}
+
+/* заголовки */
+.product-page h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #333;
+}
+
+.product-title {
+    font-size: 38px;
+    color: #5c8f4f;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* зірочки */
+.stars {
+    color: #5c8f4f;
+    letter-spacing: 3px;
+    margin: 10px 0;
+}
+
+/* ЧЕРВОНА ПЛАШКА */
+.highlight {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #c0392b;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 25px 0;
+}
+
+/* кружок-іконка */
+.highlight::before {
+    content: "";
+    width: 45px;
+    height: 45px;
+    background: url('../images/icon-tomato.png') center/cover no-repeat;
+}
+
+/* підзаголовки */
+.section-title {
+    font-weight: 700;
+    color: #5c8f4f;
+    margin-top: 25px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* зелена лінія */
+.section-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #5c8f4f;
+    margin-top: 5px;
+}
+
+/* текст */
+.product-page p {
+    color: #555;
+    font-size: 14px;
+}
+
+/* списки */
+.product-page ul {
+    padding-left: 20px;
+}
+
+.product-page li {
+    margin-bottom: 8px;
+}
+
+/* картинка */
+.product-img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 5px;
+}
+
+/* кнопка PDF */
+.btn-outline-success {
+    border-radius: 30px;
+    padding: 8px 20px;
+}
+
+/* back link */
+.back-link {
+    color: #5c8f4f;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
