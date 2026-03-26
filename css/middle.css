@@ -201,3 +201,48 @@ body {
 .back-link:hover {
     text-decoration: underline;
 }
+
+/* HERO */
+.contact-hero {
+    height: 250px;
+    background: url('../images/contact-bg.jpg') center/cover no-repeat;
+}
+
+/* SECTION */
+.contact-section {
+    background: #f3f3f3;
+    padding: 50px 0;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+}
+
+/* inputs */
+.contact-section label {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.form-control {
+    margin-top: 5px;
+}
+
+/* textarea */
+.textarea {
+    height: 150px;
+}
+
+/* code */
+.code {
+    font-weight: bold;
+}
+
+.small-input {
+    width: 120px;
+}
+
+/* address */
+.contact-address {
+    padding: 40px 0;
+}
