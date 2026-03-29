@@ -1,0 +1,168 @@
+@media (max-width: 1024px)
+{
+    
+
+    .nav {
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 100px;
+        background: #fff;
+        padding: 15px;
+        display: none;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .vision .container,
+    .mission .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-page .row {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 768px)
+{
+    
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .product-title {
+        font-size: 26px;
+    }
+
+    .col-md-4 {
+        width: 100%;
+    }
+
+    .icons .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 640px)
+{
+    
+
+    .hero {
+        height: 300px;
+    }
+
+    .hero h1 {
+        font-size: 22px;
+    }
+
+    .product-img {
+        max-width: 100%;
+    }
+
+    .highlight {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+@media (max-width: 480px)
+{
+    
+
+    .product-title {
+        font-size: 22px;
+    }
+
+    .form-control {
+        font-size: 14px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .textarea {
+        height: 120px;
+    }
+}
+
+
+@media (max-width: 400px)
+{
+    
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .product-title {
+        font-size: 20px;
+    }
+
+    .nav {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 320px)
+{
+    
+
+    body {
+        font-size: 13px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .product-title {
+        font-size: 18px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    header .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 100px;
+        background: white;
+        padding: 15px;
+    }
+
+    header .nav.active {
+        display: flex;
+    }
+}
