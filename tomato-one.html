@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/middle.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/responsive.css">
+
+    
 </head>
 
 <body>
@@ -44,9 +46,8 @@
 </header>
 
 <!-- CONTENT -->
-<section class="product-page">
+<section class="product-page" id="app">
     <div class="container">
-
         <a href="tomato.html" class="back-link">← Return to all tomatoes</a>
 
         <div class="row align-items-start mt-4">
@@ -82,7 +83,13 @@
                     Download PDF
                 </button>
             </div>
+    <button v-if="btnVisible == 0" @click="addToCart(product.id)" class="btn btn-success">
+        Add to cart
+    </button>
 
+    <a href="contact.html" v-if="btnVisible == 1" class="btn btn-outline-success">
+        Go to cart
+</a>
         </div>
 
         <!-- DETAILS -->
@@ -145,5 +152,7 @@ function toggleMenu() {
     document.querySelector('header .nav').classList.toggle('active');
 }
 </script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
