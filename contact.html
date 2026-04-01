@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/responsive.css">
 
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -41,7 +39,6 @@
                 <li><a href="#">R & D</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            </ul>
         </div>
 
     </div>
@@ -51,63 +48,89 @@
 <section class="contact-hero"></section>
 
 <!-- FORM -->
-<section class="contact-section">
+<section class="contact-section" id="app">
     <div class="container">
 
         <h2>Contact us</h2>
 
-        <div class="row mt-4">
+        <div v-if="cart.length > 0" class="mb-5">
+            <table class="table table-bordered align-middle bg-white">
+                <thead class="table-light">
+                    <tr>
+                        <th>Image</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="item in cart" :key="item.id">
+                        <td><img :src="item.image" style="width: 50px;"></td>
+                        <td>{{ item.title }}</td>
+                        <td>{{ item.short_text }}</td>
+                        <td class="text-center">
+                            <button @click="removeFromCart(item.id)" class="btn btn-danger btn-sm">✕</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-            <!-- LEFT -->
-            <div class="col-md-6">
+        <div v-if="orderPlaced" class="alert alert-success">
+            <h4>Thank you for your order!</h4>
+            <p><strong>Name:</strong> {{ contactFields.name }}</p>
+            <p><strong>Email:</strong> {{ contactFields.email }}</p>
+            <p><strong>Company:</strong> {{ contactFields.company }}</p>
+            <p><strong>Interest:</strong> {{ contactFields.interest }}</p>
+        </div>
 
-                <label>Name *</label>
-                <input type="text" class="form-control">
+        <form v-else @submit.prevent="makeOrder">
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <label>Name *</label>
+                    <input type="text" class="form-control" v-model="contactFields.name" required>
 
-                <label>Company Name</label>
-                <input type="text" class="form-control">
+                    <label>Company Name</label>
+                    <input type="text" class="form-control" v-model="contactFields.company">
 
-                <label>Position</label>
-                <input type="text" class="form-control">
+                    <label>Position</label>
+                    <input type="text" class="form-control" v-model="contactFields.position">
 
-                <label>City</label>
-                <input type="text" class="form-control">
+                    <label>City</label>
+                    <input type="text" class="form-control" v-model="contactFields.city">
 
-                <label>Country</label>
-                <input type="text" class="form-control">
+                    <label>Country</label>
+                    <input type="text" class="form-control" v-model="contactFields.country">
 
-                <label>Telephone</label>
-                <input type="text" class="form-control">
+                    <label>Telephone</label>
+                    <input type="text" class="form-control" v-model="contactFields.phone">
 
-                <label>Email *</label>
-                <input type="email" class="form-control">
-
-            </div>
-
-            <!-- RIGHT -->
-            <div class="col-md-6">
-
-                <label>You are a</label>
-                <select class="form-control">
-                    <option>seed producer</option>
-                </select>
-
-                <label>If other, please specify</label>
-                <input type="text" class="form-control">
-
-                <label>You are interested in</label>
-                <textarea class="form-control textarea"></textarea>
-
-                <label>Please type this code</label>
-                <div class="d-flex align-items-center gap-3">
-                    <span class="code">7 C J 3</span>
-                    <input type="text" class="form-control small-input">
-                    <button class="btn btn-success">Send Message</button>
+                    <label>Email *</label>
+                    <input type="email" class="form-control" v-model="contactFields.email" required>
                 </div>
 
-            </div>
+                <div class="col-md-6">
+                    <label>You are a</label>
+                    <select class="form-control" v-model="contactFields.role">
+                        <option value="seed producer">seed producer</option>
+                        <option value="other">other</option>
+                    </select>
 
-        </div>
+                    <label>If other, please specify</label>
+                    <input type="text" class="form-control" v-model="contactFields.other_role">
+
+                    <label>You are interested in</label>
+                    <textarea class="form-control textarea" v-model="contactFields.interest"></textarea>
+
+                    <label>Please type this code</label>
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="code">7 C J 3</span>
+                        <input type="text" class="form-control small-input">
+                        <button type="submit" class="btn btn-success">Send Message</button>
+                    </div>
+                </div>
+            </div>
+        </form>
 
     </div>
 </section>
@@ -147,5 +170,7 @@ function toggleMenu() {
     document.querySelector('header .nav').classList.toggle('active');
 }
 </script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
