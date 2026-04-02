@@ -1,0 +1,29 @@
+.footer {
+    background: #2d3e3f;
+    color: white;
+    text-align: center;
+}
+
+.footer-menu {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-menu a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-menu a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 15px;
+    font-size: 13px;
+}

@@ -1,0 +1,248 @@
+@font-face {
+    font-family: 'RobotoSlab';
+    src: url('../fonts/RobotoSlab-VariableFont_wght.ttf');
+}
+
+body {
+    font-family: 'RobotoSlab', serif;
+}
+
+/* HERO */
+.hero {
+    background: url('../images/hero.jpg') center/cover no-repeat;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ICONS */
+.icons {
+    padding: 30px 0;
+}
+
+.icon-item img {
+    height: 40px;
+}
+
+.icon-item p {
+    font-size: 13px;
+}
+
+/* VISION / MISSION */
+.vision, .mission {
+    position: relative;
+    background: #f8f8f8;
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.vision .container,
+.mission .container {
+    position: relative;
+    z-index: 1;
+}
+
+.text {
+    max-width: 500px;
+}
+
+.vision img,
+.mission img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* ACTIVITIES */
+.activities {
+    padding: 60px 0;
+}
+
+.activities img {
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+/* HERO */
+.tomato-hero {
+    height: 250px;
+    background: url('../images/tomato-bg.jpg') center/cover no-repeat;
+}
+
+/* CONTENT */
+.tomato-content {
+    background: #f5f5e6;
+    padding: 50px 0;
+}
+
+/* BOXES */
+.box {
+    background: white;
+    padding: 20px;
+    height: 100%;
+    border-radius: 5px;
+}
+
+/* PRODUCTS */
+.product {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.product img {
+    width: 100%;
+}
+
+.product h6 {
+    margin-top: 10px;
+    color: green;
+}
+/* PRODUCT PAGE */
+.product-page {
+    background: #f3f3f3;
+    padding: 60px 0;
+    position: relative;
+}
+
+/* заголовки */
+.product-page h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #333;
+}
+
+.product-title {
+    font-size: 38px;
+    color: #5c8f4f;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* зірочки */
+.stars {
+    color: #5c8f4f;
+    letter-spacing: 3px;
+    margin: 10px 0;
+}
+
+/* ЧЕРВОНА ПЛАШКА */
+.highlight {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #c0392b;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 25px 0;
+}
+
+/* кружок-іконка */
+.highlight::before {
+    content: "";
+    width: 45px;
+    height: 45px;
+    background: url('../images/icon-tomato.png') center/cover no-repeat;
+}
+
+/* підзаголовки */
+.section-title {
+    font-weight: 700;
+    color: #5c8f4f;
+    margin-top: 25px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* зелена лінія */
+.section-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #5c8f4f;
+    margin-top: 5px;
+}
+
+/* текст */
+.product-page p {
+    color: #555;
+    font-size: 14px;
+}
+
+/* списки */
+.product-page ul {
+    padding-left: 20px;
+}
+
+.product-page li {
+    margin-bottom: 8px;
+}
+
+/* картинка */
+.product-img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 5px;
+}
+
+/* кнопка PDF */
+.btn-outline-success {
+    border-radius: 30px;
+    padding: 8px 20px;
+}
+
+/* back link */
+.back-link {
+    color: #5c8f4f;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* HERO */
+.contact-hero {
+    height: 250px;
+    background: url('../images/contact-bg.jpg') center/cover no-repeat;
+}
+
+/* SECTION */
+.contact-section {
+    background: #f3f3f3;
+    padding: 50px 0;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+}
+
+/* inputs */
+.contact-section label {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.form-control {
+    margin-top: 5px;
+}
+
+/* textarea */
+.textarea {
+    height: 150px;
+}
+
+/* code */
+.code {
+    font-weight: bold;
+}
+
+.small-input {
+    width: 120px;
+}
+
+/* address */
+.contact-address {
+    padding: 40px 0;
+}
